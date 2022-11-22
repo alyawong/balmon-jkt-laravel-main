@@ -1,20 +1,24 @@
 
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
-  <div class="sidenav-header">
+  <div class="sidenav-header"> 
+
+    {{-- sidebar dashboard --}}
     <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
     <a class="align-items-center d-flex m-0 navbar-brand text-wrap" href="{{ route('dashboard') }}">
-        <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="...">
-        <span class="ms-3 font-weight-bold">Soft UI Dashboard Laravel</span>
+      <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="...">
+      <span class="ms-3 font-weight-bold">Balmon SFR 1 Jakarta</span>
     </a>
   </div>
   <hr class="horizontal dark mt-0">
+  
   <div class="collapse navbar-collapse  w-auto" id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
+        {{-- home --}}
         <a class="nav-link {{ (Request::is('dashboard') ? 'active' : '') }}" href="{{ url('dashboard') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>shop </title>
+              <title>home </title>
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF" fill-rule="nonzero">
                   <g transform="translate(1716.000000, 291.000000)">
@@ -27,17 +31,18 @@
               </g>
             </svg>
           </div>
-          <span class="nav-link-text ms-1">Dashboard</span>
+          <span class="nav-link-text ms-1">Home</span>
         </a>
-      </li>
+      </li> 
       <li class="nav-item mt-2">
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Laravel Examples</h6>
       </li>
+      {{-- about --}}
       <li class="nav-item">
         <a class="nav-link {{ (Request::is('user-profile') ? 'active' : '') }} " href="{{ url('user-profile') }}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                 <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>customer-support</title>
+                    <title>about</title>
                     <g id="Basic-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="Rounded-Icons" transform="translate(-1717.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                             <g id="Icons-with-opacity" transform="translate(1716.000000, 291.000000)">
@@ -51,7 +56,7 @@
                     </g>
                 </svg>
             </div>
-            <span class="nav-link-text ms-1">User Profile</span>
+            <span class="nav-link-text ms-1">About</span>
         </a>
       </li>
       <li class="nav-item pb-2">
@@ -65,6 +70,7 @@
       <li class="nav-item mt-2">
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Example pages</h6>
       </li>
+      {{-- Service --}}
       <li class="nav-item">
         <a class="nav-link {{ (Request::is('tables') ? 'active' : '') }}" href="{{ url('tables') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -82,9 +88,10 @@
               </g>
             </svg>
           </div>
-          <span class="nav-link-text ms-1">Tables</span>
+          <span class="nav-link-text ms-1">Service</span>
         </a>
       </li>
+      {{-- Contact --}}
       <li class="nav-item">
         <a class="nav-link {{ (Request::is('billing') ? 'active' : '') }}" href="{{ url('billing') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -105,6 +112,7 @@
           <span class="nav-link-text ms-1">Billing</span>
         </a>
       </li>
+      {{-- Virtual Reality --}}
       <li class="nav-item">
         <a class="nav-link {{ (Request::is('virtual-reality') ? 'active' : '') }}" href="{{ url('virtual-reality') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -126,6 +134,7 @@
           <span class="nav-link-text ms-1">Virtual Reality</span>
         </a>
       </li>
+      {{-- RTL --}}
       <li class="nav-item">
         <a class="nav-link {{ (Request::is('rtl') ? 'active' : '') }}" href="{{ url('rtl') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -171,6 +180,7 @@
           <span class="nav-link-text ms-1">Profile</span>
         </a>
       </li>
+      {{-- Profile --}}
       <li class="nav-item">
         <a class="nav-link  " href="{{ url('static-sign-in') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -191,6 +201,7 @@
           <span class="nav-link-text ms-1">Sign In</span>
         </a>
       </li>
+      {{-- Sign U --}}
       <li class="nav-item">
         <a class="nav-link  " href="{{ url('static-sign-up') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -233,5 +244,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 </aside>

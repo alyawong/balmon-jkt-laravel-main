@@ -1,33 +1,56 @@
 <!-- Navbar -->
-<nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
-    <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
+<nav class="navbar navbar-main navbar-expand-lg  shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+    <div class="container-fluid py-1 ">
+        {{-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
             <li class="breadcrumb-item text-sm text-dark active text-capitalize" aria-current="page">{{ str_replace('-', ' ', Request::path()) }}</li>
             </ol>
             <h6 class="font-weight-bolder mb-0 text-capitalize">{{ str_replace('-', ' ', Request::path()) }}</h6>
-        </nav>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 d-flex justify-content-end" id="navbar"> 
+        </nav>  --}}
+        <div class="">
+            <a class="nav-link {{ (Request::is('dashboard') ? 'active' : '') }}" href="{{ url('dashboard') }}">
+                <img src="assets/img/logo-kominfo.jpeg" width="90px" height="90px">
+            </a>
+        </div>
+         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 d-flex justify-content-end" id="navbar"> 
+            {{-- Home --}}
             <div class="nav-item d-flex align-self-end">
-                <a href="https://www.creative-tim.com/product/soft-ui-dashboard-laravel" target="_blank" class="btn btn-primary active mb-0 text-white" role="button" aria-pressed="true">
-                    Download
+                <a class="nav-link {{ (Request::is('dashboard') ? 'active' : '') }}" href="{{ url('dashboard') }}">
+                    <span class="nav-link-text ms-1">Home</span>
                 </a>
             </div>
+            {{-- About --}}
             <div class="ms-md-3 pe-md-3 d-flex align-items-center">
-            <div class="input-group">
+                    <a class="nav-link {{ (Request::is('user-profile') ? 'active' : '') }} " href="{{ url('user-profile') }}">
+                        <span class="nav-link-text ms-1">About</span>
+                    </a>
+            {{-- <div class="input-group">
                 <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
                 <input type="text" class="form-control" placeholder="Type here...">
+            </div> --}}
             </div>
+            {{-- Service --}}
+            <div class="ms-md-3 pe-md-3 d-flex align-items-center">
+                <a class="nav-link {{ (Request::is('tables') ? 'active' : '') }}" href="{{ url('tables') }}">
+                    <span class="nav-link-text ms-1">Service</span>
+                </a>
             </div>
+            {{-- Contact --}}
+            <div class="ms-md-3 pe-md-3 d-flex align-items-center">
+                <a class="nav-link {{ (Request::is('billing') ? 'active' : '') }}" href="{{ url('tables') }}">
+                    <span class="nav-link-text ms-1">Contact</span>
+                </a>
+            </div>
+            
             <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-flex align-items-center">
                 <a href="{{ url('/logout')}}" class="nav-link text-body font-weight-bold px-0">
                     <i class="fa fa-user me-sm-1"></i>
-                    <span class="d-sm-inline d-none">Sign Out</span>
+                    <span class="d-sm-inline d-none">Login</span>
                 </a>
             </li>
-            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+            {{-- <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                 <div class="sidenav-toggler-inner">
                     <i class="sidenav-toggler-line"></i>
@@ -114,7 +137,7 @@
                 </li>
                 </ul>
             </li>
-            </ul>
+            </ul> --}}
         </div>
     </div>
 </nav>

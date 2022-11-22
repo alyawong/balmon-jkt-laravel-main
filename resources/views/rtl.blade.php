@@ -1,6 +1,6 @@
 @extends('layouts.user_type.auth')
 
-@section('content')
+{{-- @section('content')
 
   <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg overflow-hidden">
     <div class="container-fluid py-4">
@@ -797,4 +797,4 @@
     }
   </script>
   <script src="../assets/js/plugins/choices.min.js"></script>
-@endpush
+@endpush --}}
