@@ -20,7 +20,6 @@
         <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
         <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
         <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
     </ol>
     </ol>
 
@@ -37,9 +36,6 @@
         </div>
         <div class="carousel-item">
           <img src="../../assets/img/banner5.png" class="d-block w-100" alt="Slide 4">
-      </div>
-      <div class="carousel-item">
-          <img src="../../assets/img/banner2.png" class="d-block w-100" alt="Slide 5">
       </div>
     </div>
 
